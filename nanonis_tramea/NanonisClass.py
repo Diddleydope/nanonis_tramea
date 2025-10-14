@@ -3590,7 +3590,7 @@ class Nanonis:
         """
         return self.quickSend("TCPLog.Stop", [], [], [])
 
-    def TCPLog_ChsSet(self, Channel_indexes):
+    def TCPLog_ChsSet(self, Num_channels, Channel_indexes):
         """
         TCPLog.ChsSet
         Sets the list of recorded channels in the TCP Logger module.
@@ -3606,7 +3606,7 @@ class Nanonis:
         
         
         """
-        return self.quickSend("TCPLog.ChsSet", [Channel_indexes], ["*i"], [])
+        return self.quickSend("TCPLog.ChsSet", [Num_channels, Channel_indexes], ["i", "*i"], [])
 
     def TCPLog_OversamplSet(self, Oversampling_value):
         """
@@ -4796,4 +4796,5 @@ class Nanonis:
         - Error described in the Response message>Body section
         """
         return self.quickSend("PICtrl.CtrlChPropsGet", [Controller_Index], ["i"], ["f", "f"])
+
 

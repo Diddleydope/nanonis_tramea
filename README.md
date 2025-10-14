@@ -45,7 +45,8 @@ This is why the Numpy dependency is required, since it enables the specification
 of variable sizes. 
 
 ## Change Log
-
+### 1.0.7
+Added missing argument to TCPLog_ChsSet.
 ### 1.0.6
 Fixed the programmatic control of the Oscilloscope High Resolution graph, where some functions now include an input for channel selection to support the 4-channel version of this graph.
 ### 1.0.5
